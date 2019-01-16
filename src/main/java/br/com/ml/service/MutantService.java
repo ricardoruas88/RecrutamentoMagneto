@@ -1,8 +1,11 @@
 package br.com.ml.service;
 
+import java.util.concurrent.CompletableFuture;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.scheduling.annotation.Async;
 import org.springframework.stereotype.Service;
 
 import br.com.ml.entity.DNA;
@@ -21,8 +24,9 @@ public class MutantService {
 	@Autowired
 	IDNARepository repository;
 
+	@Async
 	@SuppressWarnings("rawtypes")
-	public ResponseEntity isMutante(DNARequest dna) {
+	public CompletableFuture<ResponseEntity> isMutante(DNARequest dna) {
 
 		String[] itens = dna.getDna();
 
@@ -36,18 +40,19 @@ public class MutantService {
 
 			if (qtdeVaricaoDNA > 1) {
 				repository.save(new DNA(itens, true));
-				return new ResponseEntity<>(HttpStatus.OK);
+				return CompletableFuture.completedFuture(new ResponseEntity<>(HttpStatus.OK));
 			}
 		}
 		repository.save(new DNA(itens, false));
-		return new ResponseEntity<>(HttpStatus.FORBIDDEN);
+		return CompletableFuture.completedFuture(new ResponseEntity<>(HttpStatus.FORBIDDEN));
 
 	}
 
-	public ResponseEntity<DNAStats> stats() {
-		
+	@Async
+	public CompletableFuture<ResponseEntity<DNAStats>> stats() {
+
 		DNAStats response = repository.findMutanteCount();
-		return new ResponseEntity<DNAStats>(response, HttpStatus.OK);
+		return CompletableFuture.completedFuture(new ResponseEntity<DNAStats>(response, HttpStatus.OK));
 
 	}
 }

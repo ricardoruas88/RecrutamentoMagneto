@@ -1,5 +1,7 @@
 package br.com.ml.controller;
 
+import java.util.concurrent.CompletableFuture;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -20,12 +22,12 @@ public class MuntantController {
 
 	@SuppressWarnings("rawtypes")
 	@RequestMapping(value = "mutant", method = RequestMethod.POST, consumes = "application/json")
-	public @ResponseBody ResponseEntity isMutant(@RequestBody DNARequest dna) {
+	public @ResponseBody CompletableFuture<ResponseEntity> isMutant(@RequestBody DNARequest dna) {
 		return service.isMutante(dna);
 	}
 
 	@RequestMapping(value = "stats", method = RequestMethod.GET)
-	public @ResponseBody ResponseEntity<DNAStats> stats() {
+	public @ResponseBody CompletableFuture<ResponseEntity<DNAStats>> stats() {
 		return service.stats();
 	}
 }

@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Implementation-Title: RecrutamentoMagneto
+Implementation-Version: 1
+Built-By: ricardoruas
+Implementation-Vendor-Id: br.com.ml
+Build-Jdk: 1.8.0_131
+Implementation-URL: https://projects.spring.io/spring-boot/#/spring-bo
+ ot-starter-parent/RecrutamentoMagneto
+Created-By: Maven Integration for Eclipse
+
