@@ -24,7 +24,7 @@ public class MutantService {
 	@Autowired
 	IDNARepository repository;
 
-	@Async
+	@Async("asyncExecutor")
 	@SuppressWarnings("rawtypes")
 	public CompletableFuture<ResponseEntity> isMutante(DNARequest dna) {
 
@@ -48,7 +48,7 @@ public class MutantService {
 
 	}
 
-	@Async
+	@Async("asyncExecutor")
 	public CompletableFuture<ResponseEntity<DNAStats>> stats() {
 
 		DNAStats response = repository.findMutanteCount();
