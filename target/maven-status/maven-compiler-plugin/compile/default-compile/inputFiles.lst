@@ -1,0 +1,14 @@
+/Users/ricardoruas/git/RecrutamentoMagneto/src/main/java/br/com/ml/model/MatrizDiagonalCimaParaBaixo.java
+/Users/ricardoruas/git/RecrutamentoMagneto/src/main/java/br/com/ml/request/DNARequest.java
+/Users/ricardoruas/git/RecrutamentoMagneto/src/main/java/br/com/ml/service/MutantService.java
+/Users/ricardoruas/git/RecrutamentoMagneto/src/main/java/br/com/ml/model/MatrizDiagonalBaixoParaCima.java
+/Users/ricardoruas/git/RecrutamentoMagneto/src/main/java/br/com/ml/entity/DNAStats.java
+/Users/ricardoruas/git/RecrutamentoMagneto/src/main/java/br/com/ml/controller/MuntantController.java
+/Users/ricardoruas/git/RecrutamentoMagneto/src/main/java/br/com/ml/ServletInitializer.java
+/Users/ricardoruas/git/RecrutamentoMagneto/src/main/java/br/com/ml/response/DNAResponse.java
+/Users/ricardoruas/git/RecrutamentoMagneto/src/main/java/br/com/ml/model/Matriz.java
+/Users/ricardoruas/git/RecrutamentoMagneto/src/main/java/br/com/ml/model/MatrizVertical.java
+/Users/ricardoruas/git/RecrutamentoMagneto/src/main/java/br/com/ml/entity/DNA.java
+/Users/ricardoruas/git/RecrutamentoMagneto/src/main/java/br/com/ml/model/MatrizHorizontal.java
+/Users/ricardoruas/git/RecrutamentoMagneto/src/main/java/br/com/ml/repository/IDNARepository.java
+/Users/ricardoruas/git/RecrutamentoMagneto/src/main/java/br/com/ml/MercardoLivreApplication.java
